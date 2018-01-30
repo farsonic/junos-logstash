@@ -3,7 +3,7 @@
 
 
 
-/usr/share/logstash/bin/logstash-plugin install logstash-filter-prune
+
 
 
 enable Stream mode logging on SRX
