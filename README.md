@@ -4,7 +4,7 @@ The install.sh file will take a current Ubuntu server to be a fully operational 
 
 Download the install.sh file and execute it as root.
 
-bash install.sh 
+    bash install.sh 
 
 
 
