@@ -1,9 +1,17 @@
 # junos-logstash
 
+The install.sh file will take a current Ubuntu server to be a fully operational ELK stack with all the needed plugins and filters to accept SRX flow, webfitlering and application logs. 
+
+Download the install.sh file and execute it as root.
+
+bash install.sh 
+
+
+
 ## Enable stream-mode logging on SRX
-    set security log source-address 192.168.0.2
+    set security log source-address <ip address of SRX source> 
     set security log stream ELK format sd-syslog
-    set security log stream ELK host 192.168.0.132
+    set security log stream ELK host <ip address of ELK server> 
     set security log stream ELK host port 5140
 
 
@@ -18,3 +26,4 @@
     set security policies from-zone Trust to-zone Untrust policy web-traffic then log session-init
     set security policies from-zone Trust to-zone Untrust policy web-traffic then log session-close
 
+## Screenshots (to follow) 
