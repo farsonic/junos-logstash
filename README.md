@@ -1,6 +1,6 @@
 # junos-logstash
 
-The install.sh file will take a current Ubuntu server to be a fully operational ELK stack with all the needed plugins and filters to accept SRX flow, webfitlering and application logs. 
+The install.sh file will take a current Ubuntu server to be a fully operational ELK stack with all the needed plugins and filters to accept SRX flow, web filtering and application logs. 
 
 Download the install.sh file and execute it as root.
 
