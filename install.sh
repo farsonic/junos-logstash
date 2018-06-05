@@ -62,6 +62,9 @@ tar -zxvf GeoLite2-ASN.tar.gz --transform='s/.*\///' -C /etc/logstash/data/
 cp /var/tmp/junos-logstash/configuration/* /etc/logstash/conf.d/
 sed -i.bak s/IPADDRESS/$ip_address/ /etc/logstash/conf.d/20-output.conf
 
+#Install curator
+pip install elasticsearch-curator
+
 printf "Lets start Elasticsearch....."
 sudo systemctl daemon-reload
 sudo systemctl enable elasticsearch.service
