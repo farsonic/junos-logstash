@@ -22,7 +22,7 @@ ip_address=$(awk '{print $7}' <<< "${route}")
 #Assuming Python, Pip etc is already installed 
 sudo apt update 
 sudo apt install openjdk-8-jdk git python-pip
-pip install --upgrade pip
+pip install --upgrade pip==9.0.3
 wget -c https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version.deb
 sudo dpkg -i elasticsearch-$version.deb
 git clone https://github.com/Gallore/yaml_cli
