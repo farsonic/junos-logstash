@@ -9,6 +9,7 @@ Download the install.sh file and execute it as root.
 
 
 ## Enable stream-mode logging on SRX
+    set security log mode stream
     set security log source-address <ip address of SRX source> 
     set security log stream ELK format sd-syslog
     set security log stream ELK host <ip address of ELK server> 
