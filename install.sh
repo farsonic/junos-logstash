@@ -12,7 +12,7 @@ cd /var/tmp/
 
 #Determine the latest version of ELK based on current Elasticsearch version. All other components should match this release
 #version=$(curl -s https://www.elastic.co/downloads/elasticsearch | grep Version: -A1 | grep -v Version | sed 's/<[^>]*>//g' | sed 's/ //g')
-version="6.7.0"
+version="6.8.0"
 
 start=$(date +%s.%N)
 route=$(ip route get 8.8.8.8)
