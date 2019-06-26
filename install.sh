@@ -42,7 +42,7 @@ printf "Modifying Kibana YML files to local IP address....."
 sed -i.bak s/#server.host/server.host/ /etc/kibana/kibana.yml
 sed -i.bak s/#elasticsearch.url/elasticsearch.url/ /etc/kibana/kibana.yml
 yaml_cli -f /etc/kibana/kibana.yml -s server.host $ip_address
-yaml_cli -f /etc/kibana/kibana.yml -s elasticsearch.url http://locahost:9200
+yaml_cli -f /etc/kibana/kibana.yml -s elasticsearch.hosts http://locahost:9200
 sudo sysctl -w vm.max_map_count=262144
 
 
