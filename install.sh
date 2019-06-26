@@ -24,7 +24,7 @@ ip_address=$(awk '{print $7}' <<< "${route}")
 sudo apt update 
 sudo apt install openjdk-8-jdk git python-pip
 pip install --upgrade pip==9.0.3
-wget -c https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version.deb
+wget -c https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version-amd64.deb
 sudo dpkg -i elasticsearch-$version.deb
 git clone https://github.com/Gallore/yaml_cli
 cd yaml_cli
