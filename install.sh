@@ -32,6 +32,7 @@ pip install .
 cd /var/tmp/
 printf "Modifying Elasticsearch YML file to local IP address....."
 yaml_cli -f /etc/elasticsearch/elasticsearch.yml -s network.host $ip_address
+yaml_cli -f /etc/elasticsearch/elasticsearch.yml -s cluster.initial_master_nodes node-1
 
 
 #Install Kibana
