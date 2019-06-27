@@ -52,7 +52,7 @@ sudo dpkg -i logstash-$version-amd64.deb
 #printf "Modifying Logstash YML file to local IP address....."
 #yaml_cli -f /etc/logstash/logstash.yml -s http.host $ip_address
 
-#Install LogStash
+#Install FileBeat
 wget -c https://artifacts.elastic.co/downloads/logstash/logstash-$version.deb
 sudo dpkg -i logstash-$version.deb
 printf "Modifying Logstash YML file to local IP address....."
