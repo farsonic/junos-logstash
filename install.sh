@@ -53,10 +53,11 @@ sudo dpkg -i logstash-$version-amd64.deb
 #yaml_cli -f /etc/logstash/logstash.yml -s http.host $ip_address
 
 #Install FileBeat
-wget -c https://artifacts.elastic.co/downloads/logstash/logstash-$version.deb
-sudo dpkg -i logstash-$version.deb
-printf "Modifying Logstash YML file to local IP address....."
-yaml_cli -f /etc/logstash/logstash.yml -s http.host $ip_address
+#wget -c https://artifacts.elastic.co/downloads/logstash/logstash-$version.deb
+wget -c https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-$version.deb
+sudo dpkg -i filebeat-$version.deb
+printf "Installing Filebeat...this will need to be potentially customised for local environment"
+#yaml_cli -f /etc/filebeat/logstash.yml -s http.host $ip_address
 
 #Install SRX specific components
 cd /var/tmp/
