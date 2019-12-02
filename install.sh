@@ -12,7 +12,7 @@ cd /var/tmp/
 
 #Determine the latest version of ELK based on current Elasticsearch version. All other components should match this release
 #version=$(curl -s https://www.elastic.co/downloads/elasticsearch | grep Version: -A1 | grep -v Version | sed 's/<[^>]*>//g' | sed 's/ //g')
-version="7.2.0"
+version="7.4.2"
 
 start=$(date +%s.%N)
 route=$(ip route get 8.8.8.8)
@@ -47,8 +47,8 @@ sudo sysctl -w vm.max_map_count=262144
 
 
 #Install LogStash
-wget -c https://artifacts.elastic.co/downloads/filebeats/filebeats-$version-amd64.deb
-sudo dpkg -i logstash-$version-amd64.deb
+wget -c https://artifacts.elastic.co/downloads/logstash/logstash-$version.deb
+sudo dpkg -i logstash-$version.deb
 #printf "Modifying Logstash YML file to local IP address....."
 #yaml_cli -f /etc/logstash/logstash.yml -s http.host $ip_address
 
