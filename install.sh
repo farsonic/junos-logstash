@@ -54,8 +54,8 @@ sudo dpkg -i logstash-$version.deb
 
 #Install FileBeat
 #wget -c https://artifacts.elastic.co/downloads/logstash/logstash-$version.deb
-wget -c https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-$version.deb
-sudo dpkg -i filebeat-$version.deb
+wget -c https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-$version-amd64.deb
+sudo dpkg -i filebeat-$version-amd64.deb
 printf "Installing Filebeat...this will need to be potentially customised for local environment"
 #yaml_cli -f /etc/filebeat/logstash.yml -s http.host $ip_address
 
