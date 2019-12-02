@@ -22,7 +22,8 @@ ip_address=$(awk '{print $7}' <<< "${route}")
 #Install Prerequisites, Elasticsearch, JAVA and Git
 #Assuming Python, Pip etc is already installed 
 sudo apt update 
-sudo apt install openjdk-8-jdk git python-pip
+sudo apt install git python-pip
+#sudo apt install openjdk-8-jdk
 pip install --upgrade pip==9.0.3
 wget -c https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-$version-amd64.deb
 sudo dpkg -i elasticsearch-$version-amd64.deb
